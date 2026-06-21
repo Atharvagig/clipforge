@@ -1,8 +1,4 @@
-Here is an SEO-optimized repository description and README introduction designed to rank highly for searches related to AI video editors, video clipping, and automation:
-
-***
-
-# ClipForgeAI: Local AI Multi-Agent Video Clipper & Highlight Detector
+ ClipForgeAI: Local AI Multi-Agent Video Clipper & Highlight Detector
 
 **ClipForgeAI** is a production-grade, local AI multi-agent desktop application that automatically transforms long-form videos and YouTube URLs into viral, short-form clips (9:16) tailored for TikTok, YouTube Shorts, and Instagram Reels. Built using **PySide6**, **OpenCV**, **FFmpeg**, **faster-whisper (CUDA)**, and **Google Gemini 1.5/3.5 Flash**, it runs fully locally on consumer GPUs (optimized for 6GB VRAM cards like the RTX 3050).
 
