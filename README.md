@@ -1,53 +1,28 @@
-# ClipForgeAI - Local AI Multi-Agent Video Clipper
+Here is an SEO-optimized repository description and README introduction designed to rank highly for searches related to AI video editors, video clipping, and automation:
 
-ClipForgeAI is a production-grade local AI multi-agent desktop application built with PySide6. It automatically transforms long-form videos (local files or YouTube URLs) into short clips formatted for vertical 9:16 viewing (TikToks, Shorts, Reels) with OpenCV face-tracking, silence compression, and synchronized captions overlays.
+***
 
----
+# ClipForgeAI: Local AI Multi-Agent Video Clipper & Highlight Detector
 
-## Key Features
-- **IngestionAgent**: Paste YouTube URLs or select local files. Extracts mono audio tracks losslessly using FFmpeg.
-- **TranscriptAgent**: GPU-accelerated word-level Whisper transcription with persistent SQLite caching.
-- **ClipDetectionAgent**: Calls Google Gemini Flash to dynamically scan transcripts, scoring segments for engagement and virality.
-- **EditingAgent**: Automated face detection using Haar Cascades, smoothing vertical centering, 9:16 aspect cropping, and outline caption overlays.
-- **CaptionAgent**: Marketing copywriter drafting titles, hooks, and hashtags via Gemini.
-- **SchedulerAgent**: Polls SQLite queue and publishes posts cleanly to social network endpoints using official APIs.
-- **AnalyticsAgent**: Aggregates creator metrics (views, Likes, Watch time) and delivers advice using Gemini.
+**ClipForgeAI** is a production-grade, local AI multi-agent desktop application that automatically transforms long-form videos and YouTube URLs into viral, short-form clips (9:16) tailored for TikTok, YouTube Shorts, and Instagram Reels. Built using **PySide6**, **OpenCV**, **FFmpeg**, **faster-whisper (CUDA)**, and **Google Gemini 1.5/3.5 Flash**, it runs fully locally on consumer GPUs (optimized for 6GB VRAM cards like the RTX 3050).
 
 ---
 
-## Getting Started
-
-### Prerequisites
-1. **Python 3.10+** (Recommended: Python 3.12).
-2. **FFmpeg** (Ensure `ffmpeg` is registered in your system `Path`).
-3. **NVIDIA CUDA Toolkit & cuDNN** (For local GPU-accelerated transcription).
-
-### Installation
-Open terminal inside the directory and run:
-```powershell
-pip install PySide6 opencv-python numpy yt-dlp google-genai google-api-python-client google-auth-oauthlib faster-whisper torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-```
-
-### Launch
-Double-click `run_app.bat` or run:
-```powershell
-python -m clipforge.main
-```
+### 🚀 Key Features & Multi-Agent Architecture
+* **Highlight Detection**: Semantic timeline scanning via Gemini Flash to target funny, educational, or motivational moments with virality scores.
+* **GPU-Accelerated Transcription**: Word-level timestamps using `faster-whisper` quantized models with SQLite caching.
+* **Auto-Crop & Face Tracking**: Keeps the speaker centered in a 9:16 vertical view using Haar Cascade face-tracking filters.
+* **High-Contrast Captions**: Synchronized, styled caption overlays (outline-stroke rendering) matching word timelines.
+* **Silence Removal**: Trims speech gaps using timeline heuristics for fast-paced pacing.
+* **Copywriting Engine**: Auto-generates social media hooks, SEO descriptions, titles, and hashtags.
+* **Posting Scheduler**: Background publishing queue supporting rate limits and official social media APIs.
+* **Advisor Analytics**: Aggregates metric cards (views, likes, retention) and yields growth strategies.
 
 ---
 
-## Project Structure
-```
-clipforge-github/
-├── clipforge/
-│   ├── agents/          # Multi-agent controller scripts
-│   ├── ui/              # Glassmorphic PySide6 tab widgets
-│   ├── database/        # SQLite migration managers
-│   ├── models/          # Whisper workers and Gemini API client wrappers
-│   ├── config/          # Subdirectories and settings defaults
-│   ├── tests/           # Database automated unittests
-│   └── main.py          # Application entry point
-├── run_app.bat          # App launcher script for Windows
-├── .gitignore           # Git ignore targets
-└── README.md            # Project presentation
-```
+### 🛠️ Tech Stack & Keywords
+* **Core**: Python 3.12, PySide6 (GUI)
+* **ML/AI**: faster-whisper, PyTorch (CUDA), Google Gemini API
+* **Video/Audio**: OpenCV, FFmpeg, yt-dlp
+* **Database**: SQLite3 (thread-safe connection pool)
+* **Keywords**: *AI video editor, video clipper, highlight detector, auto crop, face tracking, automated captions, vertical shorts generator, youtube upload api, tiktok poster, creator tools.*
